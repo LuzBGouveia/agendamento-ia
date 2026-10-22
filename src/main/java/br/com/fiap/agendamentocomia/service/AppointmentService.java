@@ -1,7 +1,6 @@
 package br.com.fiap.agendamentocomia.service;
 
 import br.com.fiap.agendamentocomia.model.Appointment;
-import br.com.fiap.agendamentocomia.model.AppointmentStatus;
 import br.com.fiap.agendamentocomia.repository.AppointmentRepository;
 import org.springframework.stereotype.Service;
 
@@ -15,14 +14,6 @@ public class AppointmentService {
     public AppointmentService(AppointmentRepository appointmentRepository) {
         this.appointmentRepository = appointmentRepository;
     }
-
-    public record AppointmentRequest(
-            String clientName,
-            String service,
-            String appointmentDate,
-            String appointmentTime,
-            AppointmentStatus status
-    ){}
 
     public List<Appointment> getAppointments() {
         return appointmentRepository.findAll();
