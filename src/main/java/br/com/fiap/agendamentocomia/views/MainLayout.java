@@ -31,8 +31,8 @@ public class MainLayout extends AppLayout {
     private SideNav getSideNav() {
         SideNav sideNav = new SideNav();
         sideNav.addItem(
-            new SideNavItem("Chat", "/chat", VaadinIcon.CHAT.create()),
-            new SideNavItem("Agenda", "/agenda", VaadinIcon.CALENDAR.create())
+                new SideNavItem("Chat", "/chat", VaadinIcon.CHAT.create()),
+                new SideNavItem("Agenda", "/agenda", VaadinIcon.CALENDAR.create())
         );
 
         return sideNav;
